@@ -1,0 +1,19 @@
+---
+import { SITE } from 'astrowind:config';
+import Image from '~/components/common/Image.astro';
+import logoDark from '~/assets/logos/Altitude Corp GA.png';
+import logoLight from '~/assets/logos/Altitude Corp GA W.png';
+---
+
+<Image
+  src={logoDark}
+  alt={SITE?.name || 'Altitude Consulting'}
+  width={150}
+  class="h-auto object-contain dark:hidden"
+/>
+<Image
+  src={logoLight}
+  alt={SITE?.name || 'Altitude Consulting'}
+  width={150}
+  class="h-auto object-contain hidden dark:block"
+/>

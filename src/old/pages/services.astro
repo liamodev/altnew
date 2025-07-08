@@ -1,0 +1,317 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Image from '~/components/common/Image.astro';
+
+// Import actual financial institution logos
+import jpMorgan from '~/assets/images/workedwithlogos/J.P.-Morgan-Co.png';
+import ubs from '~/assets/images/workedwithlogos/UBS.png';
+import deutscheBank from '~/assets/images/workedwithlogos/DB.gif';
+import morganStanley from '~/assets/images/workedwithlogos/MS.png';
+import abnAmro from '~/assets/images/workedwithlogos/ABN.png';
+import etoro from '~/assets/images/workedwithlogos/eToro-share-img.png';
+import balm from '~/assets/images/workedwithlogos/BALM.png';
+import creditSuisse from '~/assets/images/workedwithlogos/CS.png';
+import fundSeeder from '~/assets/images/workedwithlogos/FundSeeder.png';
+import mst from '~/assets/images/workedwithlogos/MST.png';
+import saxo from '~/assets/images/workedwithlogos/Saxo-1.png';
+import synergy from '~/assets/images/workedwithlogos/Synergy.png';
+import glenEagle from '~/assets/images/workedwithlogos/GlenEagle.png';
+import aiCoEReport from '~/assets/images/AI-CoE-Report.jpg';
+import coeMethodology from '~/assets/images/CoE-Methodology.png';
+import globalPeople from '~/assets/images/global-people-1920.jpg';
+
+const metadata = {
+  title: 'Services — Altitude Consulting',
+  description: 'Board-ready AI strategy consulting services for financial firms. AI Center of Excellence blueprints, vendor evaluation, governance frameworks, and implementation support.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AI Strategy Consulting Services"
+    title="Board-Ready AI Strategy in 90 Days"
+    subtitle="We help COOs and GMs of mid-sized financial firms unlock the full potential of AI—without compromising governance or wasting resources. Our proprietary blueprint delivers an actionable AI Center of Excellence strategy tailored to your operations, talent, and regulatory landscape."
+    actions={[
+      { variant: 'primary', text: 'Book Strategy Session', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn more', href: '#services' }
+    ]}
+  >
+    <Fragment slot="title">
+      Board-Ready AI Strategy in <span class="text-gradient-professional">90 Days</span>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative mx-auto max-w-4xl w-[70%] rounded-md overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-purple-900/40 to-indigo-900/70 z-10"></div>
+        <Image
+          class="mx-auto rounded-md w-full relative z-0"
+          widths={[400, 768, 1024, 2040]}
+          sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+          loading="eager"
+          width={1024}
+          height={576}
+          src={aiCoEReport}
+          alt="AI Strategy Consulting for Financial Services"
+        />
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="Comprehensive AI Strategy Solutions"
+    subtitle="Everything you need to build and implement a successful AI Center of Excellence in your organization."
+    columns={3}
+    items={[
+      {
+        title: 'AI CoE Blueprint',
+        description:
+          'Complete roadmaps, organizational structures, and implementation playbooks tailored to your business needs and regulatory environment.',
+        icon: 'tabler:brain',
+        classes: {
+          icon: 'text-teal-600 dark:text-teal-400',
+        },
+      },
+      {
+        title: 'Vendor Evaluation & Strategy',
+        description:
+          'Strategic assessment and selection of AI vendors and technologies that align with your operational requirements and security standards.',
+        icon: 'tabler:chart-line',
+        classes: {
+          icon: 'text-blue-600 dark:text-blue-400',
+        },
+      },
+      {
+        title: 'Cross-Department Alignment',
+        description:
+          'Facilitate collaboration between IT, operations, compliance, and business units for seamless AI adoption and governance.',
+        icon: 'tabler:network',
+        classes: {
+          icon: 'text-indigo-600 dark:text-indigo-400',
+        },
+      },
+      {
+        title: 'Governance & Compliance',
+        description:
+          'Robust frameworks ensuring AI implementations meet regulatory requirements and risk management standards across all jurisdictions.',
+        icon: 'tabler:shield-lock',
+        classes: {
+          icon: 'text-violet-600 dark:text-violet-400',
+        },
+      },
+      {
+        title: 'AI Hiring Advisory',
+        description:
+          'Job descriptions, organizational design, and talent acquisition strategies for building your internal AI capability center.',
+        icon: 'tabler:users',
+        classes: {
+          icon: 'text-purple-600 dark:text-purple-400',
+        },
+      },
+      {
+        title: 'Voice AI Staff Discovery',
+        description:
+          'Proprietary voice-AI tools for rapid organizational analysis, identifying opportunities and resistance points across 500+ staff in under a week.',
+        icon: 'tabler:microphone',
+        classes: {
+          icon: 'text-pink-600 dark:text-pink-400',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Strategic Roadmap',
+        description:
+          'Board-ready AI strategy with clear implementation phases, resource allocation, and success metrics aligned with your business objectives.',
+        icon: 'tabler:route',
+      },
+      {
+        title: 'Regulatory Compliance',
+        description:
+          'Comprehensive governance frameworks that anticipate future compliance requirements while enabling innovation and competitive advantage.',
+        icon: 'tabler:file-certificate',
+      },
+      {
+        title: 'Operational Integration',
+        description:
+          'Seamless integration of AI initiatives with existing workflows, ensuring adoption and ROI across front, middle, and back office operations.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Risk Management',
+        description:
+          'Proactive identification and mitigation of AI-related risks, including bias, security, and operational continuity concerns.',
+        icon: 'tabler:alert-triangle',
+      },
+    ]}
+    image={`
+      <div class="relative rounded-lg overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/60 via-blue-600/50 via-indigo-600/40 via-violet-600/30 via-purple-600/20 to-orange-500/10 z-10"></div>
+        <img
+          class="w-full h-full object-cover object-top object-right rounded-lg relative z-0"
+          src="${coeMethodology.src}"
+          alt="AI Strategy Framework"
+          loading="lazy"
+        />
+      </div>
+    `}
+    classes={{
+      items: {
+        icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-teal-500 dark:bg-teal-600 text-white p-1',
+      },
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Methodology</h3>
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-6">
+        We combine executive interviews, proprietary voice-AI discovery tools, and deep financial services expertise to deliver actionable strategies that align departments, satisfy boards, and drive measurable results.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '90-Day Delivery',
+        description:
+          'From initial assessment to board presentation, we deliver your complete AI strategy in just 90 days—faster than traditional consulting approaches.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Implementation Support',
+        description:
+          'Optional post-roadmap support to help you hire the right talent, onboard vendors, and launch your AI initiatives successfully.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Talent Retention',
+        description:
+          'AI strategies that enhance your ability to attract and retain top talent who expect modern, AI-enhanced workflows and tools.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Competitive Advantage',
+        description:
+          'Position your firm as forward-thinking and innovative while maintaining the governance and risk management standards your clients expect.',
+        icon: 'tabler:trophy',
+      },
+    ]}
+    image={`
+      <div class="relative rounded-lg overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-800/50 via-emerald-700/35 via-teal-600/25 to-green-500/15 z-10"></div>
+        <img
+          class="w-full h-full object-cover rounded-lg relative z-0"
+          src="${globalPeople.src}"
+          alt="AI Implementation Benefits"
+          loading="lazy"
+        />
+      </div>
+    `}
+    classes={{
+      items: {
+        icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-blue-800 dark:bg-blue-900 text-white p-1',
+      },
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose Altitude Consulting?</h3>
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-6">
+        With over 25 years of experience scaling regulated financial businesses and implementing AI solutions since 2013, we bring an operator's perspective to every engagement. We understand the challenges you face because we've lived them.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Brands Widget **************** -->
+
+  <Brands
+    title="Trusted by Leading Financial Institutions"
+    subtitle="We've helped organizations across the financial services sector implement AI strategies that drive results."
+    images={[
+      {
+        src: jpMorgan.src,
+        alt: 'J.P. Morgan',
+      },
+      {
+        src: ubs.src,
+        alt: 'UBS',
+      },
+      {
+        src: deutscheBank.src,
+        alt: 'Deutsche Bank',
+      },
+      {
+        src: morganStanley.src,
+        alt: 'Morgan Stanley',
+      },
+      {
+        src: abnAmro.src,
+        alt: 'ABN Amro',
+      },
+      {
+        src: etoro.src,
+        alt: 'eToro',
+      },
+      {
+        src: balm.src,
+        alt: 'BALM',
+      },
+      {
+        src: creditSuisse.src,
+        alt: 'Credit Suisse',
+      },
+      {
+        src: fundSeeder.src,
+        alt: 'Fund Seeder',
+      },
+      {
+        src: mst.src,
+        alt: 'MST',
+      },
+      {
+        src: saxo.src,
+        alt: 'Saxo Bank',
+      },
+      {
+        src: synergy.src,
+        alt: 'Synergy',
+      },
+      {
+        src: glenEagle.src,
+        alt: 'Glen Eagle',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Strategy Session',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+    ]}
+    title="Ready to Transform Your AI Strategy?"
+    subtitle="Join the financial institutions already leveraging our expertise to build successful AI Centers of Excellence. Get your board-ready AI strategy in just 90 days."
+  />
+</Layout>

@@ -1,0 +1,96 @@
+---
+import '@fontsource-variable/inter';
+
+// 'DM Sans'
+// Nunito
+// Dosis
+// Outfit
+// Roboto
+// Literata
+// 'IBM Plex Sans'
+// Karla
+// Poppins
+// 'Fira Sans'
+// 'Libre Franklin'
+// Inconsolata
+// Raleway
+// Oswald
+// 'Space Grotesk'
+// Urbanist
+---
+
+<style is:inline>
+  :root {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: 'Inter Variable';
+    --aw-font-heading: 'Inter Variable';
+
+    /* Brand Colors - Altitude Consulting */
+    --aw-color-primary: rgb(11 29 58); /* Deep Navy #0B1D3A */
+    --aw-color-secondary: rgb(110 124 135); /* Slate Gray #6E7C87 */
+    --aw-color-accent: rgb(20 184 166); /* Teal for gradient start */
+
+    --aw-color-text-heading: rgb(11 29 58); /* Deep Navy */
+    --aw-color-text-default: rgb(16 16 16);
+    --aw-color-text-muted: rgb(110 124 135); /* Slate Gray */
+    --aw-color-bg-page: rgb(255 255 255); /* White */
+
+    --aw-color-bg-page-dark: rgb(11 29 58); /* Deep Navy for dark mode */
+
+    /* Brand Neutral Colors */
+    --aw-color-light-gray: rgb(244 245 247); /* Light Gray #F4F5F7 */
+    --aw-color-slate-gray: rgb(110 124 135); /* Slate Gray #6E7C87 */
+
+    ::selection {
+      background-color: rgb(20 184 166 / 20%); /* Teal with opacity */
+    }
+  }
+
+  .dark {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: 'Inter Variable';
+    --aw-font-heading: 'Inter Variable';
+
+    /* Brand Colors - Dark Mode */
+    --aw-color-primary: rgb(255 255 255); /* White */
+    --aw-color-secondary: rgb(244 245 247); /* Light Gray */
+    --aw-color-accent: rgb(20 184 166); /* Teal */
+
+    --aw-color-text-heading: rgb(255 255 255); /* White */
+    --aw-color-text-default: rgb(244 245 247); /* Light Gray */
+    --aw-color-text-muted: rgb(110 124 135); /* Slate Gray */
+    --aw-color-bg-page: rgb(11 29 58); /* Deep Navy */
+
+    ::selection {
+      background-color: rgb(20 184 166 / 30%); /* Teal with opacity */
+      color: rgb(255 255 255);
+    }
+  }
+</style>
+
+<script>
+  // Add scroll-based gradient movement
+  document.addEventListener('DOMContentLoaded', function() {
+    let ticking = false;
+    
+    function updateGradient() {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      const body = document.body;
+      
+      // Update gradient position based on scroll
+      body.style.backgroundPosition = `${rate}px 50%`;
+      
+      ticking = false;
+    }
+    
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateGradient);
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+  });
+</script>

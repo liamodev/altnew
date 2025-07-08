@@ -1,0 +1,197 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+// Import actual financial institution logos
+import jpMorgan from '~/assets/images/workedwithlogos/J.P.-Morgan-Co.png';
+import ubs from '~/assets/images/workedwithlogos/UBS.png';
+import deutscheBank from '~/assets/images/workedwithlogos/DB.gif';
+import morganStanley from '~/assets/images/workedwithlogos/MS.png';
+import etoro from '~/assets/images/workedwithlogos/eToro-share-img.png';
+import creditSuisse from '~/assets/images/workedwithlogos/CS.png';
+import mst from '~/assets/images/workedwithlogos/MST.png';
+import saxo from '~/assets/images/workedwithlogos/Saxo-1.png';
+import fundSeeder from '~/assets/images/workedwithlogos/FundSeeder.png';
+import abnAmro from '~/assets/images/workedwithlogos/ABN.png';
+import balm from '~/assets/images/workedwithlogos/BALM.png';
+import synergy from '~/assets/images/workedwithlogos/Synergy.png';
+import glenEagle from '~/assets/images/workedwithlogos/GlenEagle.png';
+import aiCoEConsult from '~/assets/images/AI-CoE-Consult.jpg';
+
+const metadata = {
+  title: 'Altitude Consulting — Board-Ready AI Strategy in 90 Days',
+  description: 'We help COOs and GMs of mid-sized financial firms unlock the full potential of AI—without compromising governance or wasting resources.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Board-Ready AI Strategy in 90 Days"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Strategy Session',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+      { text: 'Learn more', href: '#capabilities' },
+    ]}
+  >
+    <Fragment slot="title">
+      Build Your <span class="bg-gradient-to-r from-teal-500 via-blue-600 via-indigo-600 via-violet-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">AI Center of Excellence</span>
+      <br />Strategy. Structure. Talent. Governance.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We help COOs and GMs of mid-sized financial firms unlock the full potential of AI—without compromising governance or wasting resources. Our proprietary blueprint delivers an actionable AI Center of Excellence strategy tailored to your operations, talent, and regulatory landscape.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative mx-auto max-w-4xl w-[70%] rounded-md overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-purple-900/40 to-indigo-900/70 z-10"></div>
+        <Image
+          class="mx-auto rounded-md w-full relative z-0"
+          widths={[400, 768, 1024, 2040]}
+          sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+          loading="eager"
+          width={1024}
+          height={576}
+          src={aiCoEConsult}
+          alt="AI Strategy Consulting"
+        />
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Client Logos Section ********** -->
+
+  <Brands
+    title="Trusted by Leading Financial Institutions"
+    subtitle="We've helped organizations across the financial services sector implement AI strategies that drive results."
+    images={[
+      {
+        src: jpMorgan.src,
+        alt: 'J.P. Morgan',
+      },
+      {
+        src: ubs.src,
+        alt: 'UBS',
+      },
+      {
+        src: deutscheBank.src,
+        alt: 'Deutsche Bank',
+      },
+      {
+        src: morganStanley.src,
+        alt: 'Morgan Stanley',
+      },
+      {
+        src: etoro.src,
+        alt: 'eToro',
+      },
+      {
+        src: creditSuisse.src,
+        alt: 'Credit Suisse',
+      },
+      {
+        src: mst.src,
+        alt: 'MST',
+      },
+      {
+        src: saxo.src,
+        alt: 'Saxo Bank',
+      },
+      {
+        src: fundSeeder.src,
+        alt: 'FundSeeder',
+      },
+      {
+        src: abnAmro.src,
+        alt: 'ABN Amro',
+      },
+      {
+        src: balm.src,
+        alt: 'BALM',
+      },
+      {
+        src: synergy.src,
+        alt: 'Synergy',
+      },
+      {
+        src: glenEagle.src,
+        alt: 'Glen Eagle',
+      },
+    ]}
+  />
+
+  <!-- Key Capabilities *************** -->
+
+  <Features
+    id="capabilities"
+    tagline="Core Capabilities"
+    title="Comprehensive AI Strategy Solutions"
+    subtitle="Everything you need to build and implement a successful AI Center of Excellence in your organization."
+    columns={4}
+    items={[
+      {
+        title: 'AI CoE Blueprint',
+        description:
+          'Complete roadmaps, organizational structures, and implementation playbooks tailored to your business needs.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Vendor Evaluation',
+        description:
+          'Strategic assessment and selection of AI vendors and technologies that align with your operational requirements.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Cross-Department Alignment',
+        description:
+          'Facilitate collaboration between IT, operations, compliance, and business units for seamless AI adoption.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Governance & Compliance',
+        description:
+          'Robust frameworks ensuring AI implementations meet regulatory requirements and risk management standards.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Strategy Session',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+      {
+        variant: 'secondary',
+        text: 'Learn About Our Services',
+        href: '/services',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Transform Your AI Strategy?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join the financial institutions already leveraging our expertise to build successful AI Centers of Excellence. <br class="hidden md:inline" />
+      Get your board-ready AI strategy in just 90 days.
+    </Fragment>
+  </CallToAction>
+</Layout>
