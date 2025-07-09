@@ -5,15 +5,12 @@ export default function Logo() {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/logos/A7.png"
+        src="/logos/New-Combined-Trans.png"
         alt="Altitude Consulting"
-        width={40}
-        height={40}
-        className="w-8 h-8 md:w-10 md:h-10"
+        width={855}
+        height={213}
+        className="w-32 h-8 md:w-40 md:h-10"
       />
-      <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">
-        Altitude
-      </span>
     </Link>
   );
 } 

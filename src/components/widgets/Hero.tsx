@@ -50,7 +50,16 @@ export default function Hero({
                   {Array.isArray(actions) ? (
                     actions.map((action, index) => (
                       <div key={index} className="flex w-full sm:w-auto">
-                        <Button {...action} className="w-full sm:mb-0" />
+                        <Button 
+                          {...action} 
+                          className={`w-full sm:mb-0 ${
+                            action.variant === 'primary' 
+                              ? '!text-gray-500 hover:!text-white' 
+                              : action.variant === 'secondary'
+                              ? '!text-black !font-bold hover:!text-gray-800'
+                              : ''
+                          }`}
+                        />
                       </div>
                     ))
                   ) : (

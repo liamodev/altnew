@@ -22,7 +22,7 @@ export default function HomePage() {
             href: '/contact',
             icon: 'calendar',
           },
-          { text: 'Learn more', href: '#capabilities' },
+          { variant: 'primary', text: 'Learn more', href: '#capabilities' },
         ]}
         title="Build Your <span class='bg-gradient-to-r from-teal-500 via-blue-600 via-indigo-600 via-violet-600 via-purple-600 to-orange-500 bg-clip-text text-transparent'>AI Center of Excellence</span><br />Strategy. Structure. Talent. Governance."
         subtitle="We help COOs and GMs of mid-sized financial firms unlock the full potential of AI—without compromising governance or wasting resources. Our proprietary blueprint delivers an actionable AI Center of Excellence strategy tailored to your operations, talent, and regulatory landscape."
